@@ -1,9 +1,15 @@
 {
   "name": "loan-calculator",
   "private": true,
+  "packageManager": "pnpm@7.32.4",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "prepare": "husky install",
+    "preinstall": "npx only-allow pnpm",
+    "lint": "pnpm es-lint && pnpm style-lint",
+    "es-lint": "eslint . --ext .ts,.tsx,.vue,.js",
+    "style-lint": "stylelint 'src/**/*.(scss|css|vue)'",
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
@@ -12,6 +18,10 @@
     "vue": "^3.2.47"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-angular": "^17.6.3",
+    "@commitlint/config-angular-type-enum": "^17.4.0",
+    "@commitlint/types": "^17.4.4",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.59.6",
     "@vitejs/plugin-vue": "^4.1.0",
@@ -21,6 +31,7 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.13.0",
+    "husky": "^8.0.3",
     "postcss": "^8.4.23",
     "postcss-html": "^1.5.0",
     "sass": "^1.62.1",
