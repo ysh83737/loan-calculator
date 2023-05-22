@@ -12,6 +12,9 @@ node_modules
 dist
 dist-ssr
 *.local
+.eslintrc-auto-import.json
+auto-imports.d.ts
+components.d.ts
 
 # Editor directories and files
 # .vscode/*
