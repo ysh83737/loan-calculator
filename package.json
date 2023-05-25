@@ -15,9 +15,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vue/runtime-core": "^3.3.4",
     "element-plus": "^2.3.5",
-    "vue": "^3.2.47"
+    "vue": "^3.3.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
